@@ -1,5 +1,6 @@
 package com.packt.example.clientimplicit;
 
+import com.packt.example.clientimplicit.vo.DemoVo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
@@ -8,10 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.util.HashMap;
+
 @Controller
 @SpringBootApplication
 @EnableSwagger2
-@RequestMapping("/test")
+@RequestMapping("/")
 public class ClientImplicitApplication {
 
 	public static void main(String[] args) {
@@ -20,15 +23,19 @@ public class ClientImplicitApplication {
 		System.out.println("Spring Boot test Started.");
 	}
 
-	@GetMapping("/")
+	@GetMapping("/test1")
 	public String client(){
 		return "client";
 	}
 
-	@GetMapping("callback")
+	@GetMapping("/callback")
 	public String callback(){
 		return "callback_page";
 	}
 
+	@GetMapping("/test")
+	public String test(){
+		return "test";
+	}
 
 }

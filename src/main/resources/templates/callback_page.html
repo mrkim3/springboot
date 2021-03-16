@@ -18,9 +18,9 @@ Friends who has also granted client-implicit
 $(document).ready(function() {
 	var fragment = window.location.hash;
 	var res = getResponse(fragment);
-
+	console.log("====="+JSON.stringify(fragment));
 	window.location.hash = '_#';
-
+console.log("====="+JSON.stringify(res));
 	if (res.hasError()) {
 		$("<div>Error trying to obtain user's authorization!</div>")
 			.insertBefore('#friends');
@@ -47,7 +47,7 @@ function getResponse(fragment) {
 	response.hasError = function() {
 		return !response['access_token'];
 	};
-
+	console.log("====="+JSON.stringify(response));
 	return response;
 }
 

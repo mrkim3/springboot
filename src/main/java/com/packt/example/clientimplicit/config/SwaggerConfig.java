@@ -1,4 +1,4 @@
-package com.packt.example.clientimplicit;
+package com.packt.example.clientimplicit.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

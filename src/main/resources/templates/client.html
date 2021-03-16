@@ -23,7 +23,8 @@ function makeRequest() {
 	var auth_endpoint = "https://www.facebook.com/v10.0/dialog/oauth?",
 		response_type = "token",
 		client_id = "735633790283897",
-		redirect_uri = "http://localhost:8080/test/callback",
+		client_secret = "eb1241f4a22075d395090ca4249e0309",
+		redirect_uri = "https://localhost:8080/callback",
 		scope = "public_profile user_friends";
 
 	var request_endpoint = auth_endpoint + "?" +
