@@ -23,19 +23,4 @@ public class ClientImplicitApplication {
 		System.out.println("Spring Boot test Started.");
 	}
 
-	@GetMapping("/test1")
-	public String client(){
-		return "client";
-	}
-
-	@GetMapping("/callback")
-	public String callback(){
-		return "callback_page";
-	}
-
-	@GetMapping("/test")
-	public String test(){
-		return "test";
-	}
-
 }
