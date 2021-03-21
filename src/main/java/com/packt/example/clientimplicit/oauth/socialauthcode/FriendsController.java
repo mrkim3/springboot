@@ -21,18 +21,5 @@ public class FriendsController {
 	@Autowired
     private ConnectionRepository connectionRepository;
 
-    @GetMapping
-    public String friends(Model model) {
-        if (connectionRepository.findPrimaryConnection(Facebook.class) == null) {
-            return "redirect:/connect/facebook";
-        }
 
-        String [] fields = { "id", "email", "name" };
-        User userProfile = facebook.fetchObject("me", User.class, fields);
-
-        model.addAttribute("facebookProfile", userProfile);
-        PagedList<Reference> friends = facebook.friendOperations().getFriends();
-        model.addAttribute("friends", friends);
-        return "friends";
-    }
 }
