@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.HashMap;
 
 @Controller
-//@SpringBootApplication
+@SpringBootApplication
 @EnableSwagger2
 @RequestMapping("/")
 public class ClientImplicitApplication {
