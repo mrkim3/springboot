@@ -21,3 +21,11 @@ spring:
     username: test
     password: test
     driver-class-name: com
+logging:
+  file: logs/test.log
+  level:
+    com.netflix: debug
+    org.springframework.web.filter.CommonsRsultLoggingFilter : DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %msg%n"
+    file: "%d{HH:mm:ss.SSS} %-5level %msg%n"
